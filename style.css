@@ -93,10 +93,8 @@
     align-items: center;
 }
 
-.box {
-    width: 100px;
-    height: 100px;
-    background: purple;
+.banner-media {
+    display: none;
 }
 
 @media screen and (max-width:535px) {
@@ -121,13 +119,20 @@
 
     .main-box {
         order: 4;
-        flex: 2;
+        flex: 3;
     }
 
     .banner {
-        display: flex;
+        display: none;
+    }
+
+    .banner-media {
         order: 5;
         flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: yellow;
     }
 
     .main-content {

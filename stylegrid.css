@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-rows: 10% 50% 30% 10%;
+    height: 100vh;
+    width: 100vw;
+    background: slateblue;
+    grid-template-areas: 
+    "header menu menu menu"
+    "hero hero hero hero"
+    "main main . extrasection"
+    "banner banner banner banner"
+    ;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+    background: lightpink;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: menu;
+    background: lightblue;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: hero;
+    background: lightcoral;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+    background: lightseagreen;
+}
+
+.extrasection {
+    display: flex;
+    flex-direction: column;
+    grid-area: extrasection;
+    background: lightslategrey;
+}
+
+.image {
+    display: flex;
+    flex: 1;
+    background-color: blueviolet;
+}
+.extra {
+    display: flex;
+    flex: 1;
+    background-color: darkorange;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: banner;
+    background: yellow;
+}
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 10% 30% 15% 20% 10% 15%;
+        height: 100vh;
+        width: 100vw;
+        grid-template-areas: 
+        "header header header"
+        "hero hero hero"
+        "menu main main"
+        "menu main main"
+        "menu banner banner"
+        "menu extrasection extrasection"
+        ;
+    }
+
+    .extrasection {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: 100vh;
+        width: 100vw;
+        grid-template-areas: 
+        "header"
+        "menu"
+        "hero"
+        "main"
+        "banner"
+        "extrasection"
+        ;
+    }
+
+    .extrasection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .extra {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
