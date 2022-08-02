@@ -41,6 +41,12 @@
     background: lightseagreen;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main-content {
     display: flex;
     flex: 1 1 35%;
@@ -51,6 +57,9 @@
 .main-box {
     flex-basis: 50%;
     background-color: darkmagenta;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-extra {
@@ -58,26 +67,77 @@
     background-color: cornflowerblue;
     display: flex;
     flex-direction: column;
-    
 }
 
 .section-extra > .image{
     flex: 1;
     background-color: forestgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-extra > .extra{
     flex: 1;
     background-color: lawngreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner {
     flex: 1 1 10%;
     background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box {
     width: 100px;
     height: 100px;
     background: purple;
+}
+
+@media screen and (max-width:535px) {
+    .header-content{
+        flex-direction: column;
+    }
+
+    .left-side {
+        order: 1;
+        flex: 2;
+    }
+
+    .right-side {
+        order: 2;
+        flex: 2;
+    }
+
+    .center {
+        order: 3;
+        flex: 3;
+    }
+
+    .main-box {
+        order: 4;
+        flex: 2;
+    }
+
+    .banner {
+        display: flex;
+        order: 5;
+        flex: 2;
+    }
+
+    .main-content {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .section-extra {
+        flex-basis: 50%;
+        order: 6;
+    }
+    
 }
